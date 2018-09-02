@@ -6,7 +6,7 @@ class Main extends CI_Controller {
 	public function index(){
 		
         //$login_details=html_escape($this->input->post());
-		$url_array = explode('?', 'http://'.$_SERVER ['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+		$url_array = explode('?', 'https://'.$_SERVER ['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 		$url = $url_array[0];
         $rtnURL = BASE_URL;
         
@@ -25,7 +25,7 @@ class Main extends CI_Controller {
 			$client->authenticate();
 		}
 
-		if (!empty(isset($_POST['google_drive'])) && isset($_POST['list'])) {
+		if (!empty(isset($_POST['google_drive'])) && isset($_POST['list']) && isset($_SESSION['accessToken'])) {
 			$client->setAccessToken($_SESSION['accessToken']);
 			$service = new Google_DriveService($client);
 			$finfo = finfo_open(FILEINFO_MIME_TYPE);
