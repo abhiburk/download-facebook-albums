@@ -8,6 +8,13 @@ define('FB_SECRET_ID','972a09d810ff60b8b8dccb08ad492e67');
 define('GOOGLE_CLIENT_ID','963572427675-rhn95uurnvclg666f74lmb3esqfcikqf.apps.googleusercontent.com');
 define('GOOGLE_CLIENT_SECRET_ID','9VXjAYJDLUpmExuBLUSXhR6G');
 
+define('USERNAME','root');
+define('PASSWPRD','');
+define('DB','');
+
+define('USERNAME','alumni');
+define('PASSWPRD','alumni@123');
+define('DB','alumini_db');
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace
