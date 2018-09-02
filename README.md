@@ -34,7 +34,7 @@ You can also move or store your facebook albums on to your Google Drive storage.
 2. ### [Google APIs Client Library for PHP](http://developers.google.com/api-client-library/php) 
     - The Google API Client Library enables you to work with Google APIs such as Google+, Drive, or YouTube on your server.
 
-# Unit Testing
+<!-- # Unit Testing
 
-Unit testing for this script is done using [unit codeigniter library](https://www.codeigniter.com/user_guide/libraries/unit_testing.html).
+Unit testing for this script is done using [unit codeigniter library](https://www.codeigniter.com/user_guide/libraries/unit_testing.html). -->
 
