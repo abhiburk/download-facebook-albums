@@ -10,6 +10,7 @@ class Home extends CI_Controller {
             'app_secret' => FB_SECRET_ID,
             'default_graph_version' => 'v2.2',
 			]);
+			
 		$helper = $fb->getRedirectLoginHelper();
 		$permissions = ['email']; 
 		$_SESSION['loginURL'] = $helper->getLoginUrl(BASE_URL.'callback/', $permissions);
