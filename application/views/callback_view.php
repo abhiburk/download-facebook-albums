@@ -21,10 +21,10 @@
     
     <div id="head" align="center">
         <a class="fg_cl hvr-grow">Facebook to GoogleDrive</a>
-        <?php  $url = 'https://www.facebook.com/logout.php?next=' . BASE_URL .
+        <!-- <?php  $url = 'https://www.facebook.com/logout.php?next='.BASE_URL.
                '&access_token='.$accessToken; ?>
-        <a href="<?=$url;?>" style="font-size:15px">Logout fb</a>
-        
+        <a href="<?=$url;?>" style="font-size:15px">Logout fb</a> -->
+
         <div class="head_card" >
             <input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox slct_all chk_boxes" />
             <label for="checkboxG1" class="css-label">Select All</label> |

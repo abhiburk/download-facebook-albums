@@ -18,4 +18,12 @@ class Home extends CI_Controller {
 		$this->load->view('home_view');
 	}
 
+	public function logout()
+	{
+		require_once dirname(__FILE__)."/../../lib/Facebook/autoload.php";
+		$url = 'https://www.facebook.com/logout.php?next='.BASE_URL.'&access_token='.$accessToken; 
+        session_destroy();
+        header('Location: '.$url);
+	}
+
 }
