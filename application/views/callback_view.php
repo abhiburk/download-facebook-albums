@@ -34,6 +34,7 @@
         $response = $fb->get('/me?fields=name,id,email,albums', $accessToken);
         $user = $response->getGraphuser();
         $userName=$user['name'];
+        if(isset($user['albums'])){
         foreach($user['albums'] as $al){
             $albumID=$al['id'];
             $albumName=$al['name'];
@@ -85,7 +86,9 @@
             $(".list<?= $albumID; ?>").prop("checked", !$(".list<?= $albumID; ?>").prop("checked"));
         });
         </script>
-        <?php }  ?>
+        <?php }}else {
+            echo 'No Albums Found';
+        }  ?>
     </div>
 </form>
 
