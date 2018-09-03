@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 			]);
 			
 		$helper = $fb->getRedirectLoginHelper();
-		$permissions = ['email']; 
+		$permissions = ['email','user_photos']; 
 		$_SESSION['loginURL'] = $helper->getLoginUrl(BASE_URL.'callback/', $permissions);
 		
 		$this->load->view('home_view');
