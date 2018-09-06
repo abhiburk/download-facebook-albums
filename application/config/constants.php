@@ -1,14 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+define('FB_APP_ID','');
+define('FB_SECRET_ID','');
 
-define('FB_APP_ID','256968298279547');
-define('FB_SECRET_ID','972a09d810ff60b8b8dccb08ad492e67');
+define('GOOGLE_CLIENT_ID','');
+define('GOOGLE_CLIENT_SECRET_ID','');
 
-define('GOOGLE_CLIENT_ID','963572427675-rhn95uurnvclg666f74lmb3esqfcikqf.apps.googleusercontent.com');
-define('GOOGLE_CLIENT_SECRET_ID','9VXjAYJDLUpmExuBLUSXhR6G');
-
-define('BASE_URL','https://localhost/fbalbum/');
+define('BASE_URL','');
 define('USERNAME','root');
 define('PASSWPRD','');
 define('DB','');

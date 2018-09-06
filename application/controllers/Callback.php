@@ -11,5 +11,18 @@ class Callback extends CI_Controller {
         $this->load->view('gallary_view');
     }
 
+    public function set_session(){
+        if(isset($_POST['data'])){
+            $_SESSION['album']=json_decode($_POST['data']);
+            echo 'success';
+            die();
+        }
+    }
+
+    public function get_session(){
+        echo '<pre>';
+        print_r(($_SESSION['album']));
+        exit;
+    }
 
 }

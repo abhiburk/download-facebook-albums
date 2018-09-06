@@ -6,13 +6,18 @@
         'default_graph_version' => 'v2.2',
         ]);
 
+    $jsHelper = $fb->getJavaScriptHelper();
+    // @TODO This is going away soon
+    $facebookClient = $fb->getClient();
+
     //require_once(BASE_URL.'lib/Facebook/autoload.php');
     $helper = $fb->getRedirectLoginHelper();
     if (isset($_GET['state'])) { 
         $helper->getPersistentDataHandler()->set('state', $_GET['state']); 
     }
     try {
-        $accessToken = $helper->getAccessToken(BASE_URL.'callback/');
+        $accessToken = $jsHelper->getAccessToken($facebookClient);
+        //$accessToken = $helper->getAccessToken(BASE_URL.'callback/');
         //$accessToken = $helper->getAccessToken();
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error

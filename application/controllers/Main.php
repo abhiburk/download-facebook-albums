@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Main extends CI_Controller {
     
 	public function index(){
+		ini_set('max_execution_time', 0); //300 seconds = 5 minutes
+    	ini_set('memory_limit','2048M');
 		
         //$login_details=html_escape($this->input->post());
 		$url_array = explode('?', 'https://'.$_SERVER ['HTTP_HOST'].$_SERVER['REQUEST_URI']);
@@ -33,14 +35,15 @@ class Main extends CI_Controller {
 			$folder = new Google_DriveFile();
 
 			$lists=$_POST['list'];
-			$albums = $_SESSION['album']; 
+			$albums = (array)$_SESSION['album']; 
+			//print_r($albums);exit;
 			foreach($albums as $key=>$a ){
 				if (!in_array($key,$lists)){
 					unset($albums[$key]);
 				}   
 			}
 			$_SESSION['album']=$albums;
-
+			
 			$albums = $_SESSION['album']; 
 			$userName = $_SESSION['userName'];
 			

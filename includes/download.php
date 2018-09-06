@@ -3,7 +3,8 @@
 if($_POST['download_zip'] && isset($_POST['list'])){
 
     $lists=$_POST['list'];
-    $albums = $_SESSION['album']; 
+    //$albums = json_decode($_SESSION['album']); 
+    $albums = (array)$_SESSION['album']; 
     foreach($albums as $key=>$a ){
         if (!in_array($key,$lists)){
             unset($albums[$key]);
@@ -19,22 +20,24 @@ if($_POST['download_zip'] && isset($_POST['list'])){
     $zipname_location = "uploads/".$_SESSION['userName']."_$date.zip";
     $zipname_location = str_replace(' ', '_', $zipname_location);
     $zip->open($zipname_location, ZipArchive::CREATE);
-
+    
     foreach($albums as $albumName => $images){
+        $count=0;
         $dir='master/'.$albumName;
-
+        
         # loop through each file
         foreach ($images as $file) {
+            $count++;
             # download file
             $download_file = file_get_contents($file);
             
             $result = strstr($file, '.jpg', true);
+            $result = str_replace($result,$albumName."-".$count,$result);
             $newName=$result.'.jpg';
             
             #add it to the zip
             $zip->addFromString($dir.'/'.basename($newName),$download_file);
         }
-
     }
     
     # close zip
