@@ -1,8 +1,7 @@
 # Facebook-Photos Challenge 
 
  [![Build Status](https://travis-ci.org/abhiburk/fbalbum.svg?branch=master)](https://travis-ci.org/abhiburk/fbalbum)
-
- ![GitHub](https://img.shields.io/github/license/abhiburk/fbalbum.svg)
+![GitHub](https://img.shields.io/github/license/abhiburk/fbalbum.svg)
 
 
 A Small script to fetch facebook auth users albums and display them on page and then having option for user to download them as a zip or move all album to google drive.
