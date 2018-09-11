@@ -23,12 +23,12 @@ class Album_test extends TestCase
 	}
 
 	public function test_download_album_list(){
-		$output = $this->request('GET', 'UnitTest/album_list');
+		$output = $this->request('GET', 'unittest/album_list');
 		$this->assertContains('Session not available for album', $output);
 	}
 
 	public function selected_album(){
-		$output = $this->request('GET', 'UnitTest/album_list');
+		$output = $this->request('GET', 'unittest/album_list');
 		$this->assertContains('False', $output);
 	}
 
