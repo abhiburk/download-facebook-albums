@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Album_test" file="C:\wamp64\www\fbut\application\tests\controllers\Album_test.php" tests="6" assertions="6" failures="0" errors="0" time="0.071339">
+    <testcase name="test_set_session" class="Album_test" file="C:\wamp64\www\fbut\application\tests\controllers\Album_test.php" line="8" assertions="1" time="0.017898"/>
+    <testcase name="test_get_session" class="Album_test" file="C:\wamp64\www\fbut\application\tests\controllers\Album_test.php" line="14" assertions="1" time="0.012633"/>
+    <testcase name="test_delete_session" class="Album_test" file="C:\wamp64\www\fbut\application\tests\controllers\Album_test.php" line="20" assertions="1" time="0.013651"/>
+    <testcase name="test_download_album_list" class="Album_test" file="C:\wamp64\www\fbut\application\tests\controllers\Album_test.php" line="25" assertions="1" time="0.013510"/>
+    <testcase name="test_method_404" class="Album_test" file="C:\wamp64\www\fbut\application\tests\controllers\Album_test.php" line="35" assertions="1" time="0.012168"/>
+    <testcase name="test_APPPATH" class="Album_test" file="C:\wamp64\www\fbut\application\tests\controllers\Album_test.php" line="42" assertions="1" time="0.001479"/>
+  </testsuite>
+</testsuites>

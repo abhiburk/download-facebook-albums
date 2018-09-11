@@ -14,15 +14,20 @@ class Callback extends CI_Controller {
     public function set_session(){
         if(isset($_POST['data'])){
             $_SESSION['album']=json_decode($_POST['data']);
-            echo 'success';
-            die();
+            echo 'Session set successfully';
+        }else{
+            echo 'Data is not set.';
         }
     }
 
     public function get_session(){
         echo '<pre>';
-        print_r(($_SESSION['album']));
-        exit;
+        if(isset($_SESSION['album'])){
+            print_r($_SESSION['album']);
+        }else{
+            echo 'Session not available';
+        }
+        
     }
 
 }
