@@ -13,7 +13,7 @@ You can also move or store your facebook albums on to your Google Drive storage.
 
 - Authenticate yourself with facebook
 
-- Once facebook is authenticated, script will fetch your your all uploaded photos & albums from your facebook account.
+- Once facebook is authenticated, script will fetch your all uploaded photos & albums from your facebook account.
 
 - You will have several options to work with your album.
   - Slide through selected albums
@@ -21,7 +21,7 @@ You can also move or store your facebook albums on to your Google Drive storage.
   - Download/Move selected album
   - Download/Move all albums
 
-- For moving your albums to google drive you will be asked to authenticate with you account.Once you do that you can successfully move those albums to your specified google account.
+- For moving your albums to google drive you will be asked to authenticate with your Google account.Once you do that you can successfully move those albums to your specified google account.
 
 # Built With
 
